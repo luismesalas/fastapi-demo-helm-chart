@@ -14,6 +14,19 @@ imagePullSecrets: []
 nameOverride: ""
 fullnameOverride: ""
 
+secretEnvVariables:
+  - name: "PG_USER"
+    value: "postgres"
+  - name: "PG_PASS"
+    value: "postgres"
+  - name: "PG_HOST"
+    value: "fast-api-demo-postgresql"
+  - name: "PG_PORT"
+    value: 5432
+  - name: "PG_DB"
+    value: "fast-api-demo"
+
+
 serviceAccount:
   # Specifies whether a service account should be created
   create: true
