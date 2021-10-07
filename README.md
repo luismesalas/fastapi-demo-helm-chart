@@ -3,6 +3,8 @@
 A Helm chart for deploying a FastAPI demo. You can find an example in
 [this repo](https://github.com/luismesalas/fast-api-demo).
 
+## TODO include some doc about values.yaml parameters config
+
 ## Quick help about helm commands
 
 ```shell
