@@ -22,7 +22,7 @@ secretEnvVariables:
   - name: "PG_HOST"
     value: "fast-api-demo-postgresql"
   - name: "PG_PORT"
-    value: 5432
+    value: "5432"
   - name: "PG_DB"
     value: "fast-api-demo"
 
