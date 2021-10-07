@@ -1,0 +1,6 @@
+Chart.lock
+charts
+
+# IDEs and local stuff
+.idea
+*.DS_Store

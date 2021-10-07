@@ -5,10 +5,10 @@
 replicaCount: 1
 
 image:
-  repository: nginx
+  repository: eu.gcr.io/sngular-ia-playground/fast-api-demo
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
-  tag: ""
+  tag: "1.0"
 
 imagePullSecrets: []
 nameOverride: ""
@@ -80,3 +80,10 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+# You can check all available configuration paremeters for postgresql chart here:
+# https://github.com/bitnami/charts/tree/master/bitnami/postgresql#parameters
+postgresql:
+  postgresqlPassword: "postgres"
+  postgresqlUsername: "postgres"
+  postgresqlDatabase: "fast-api-demo"
