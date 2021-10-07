@@ -50,8 +50,13 @@ securityContext: {}
   # runAsUser: 1000
 
 service:
-  type: ClusterIP
-  port: 5000
+  type: LoadBalancer
+  port: 80
+  targetPort: http
+
+ports:
+  - containerPort: 5000
+    name: http
 
 ingress:
   enabled: false
@@ -68,6 +73,18 @@ ingress:
   #  - secretName: chart-example-tls
   #    hosts:
   #      - chart-example.local
+
+readinessProbe: {}
+
+livenessProbe:
+  httpGet:
+    port: 5000
+    path: /api/v1/health
+  initialDelaySeconds: 60
+  periodSeconds: 30
+  failureThreshold: 2
+  successThreshold: 1
+  timeoutSeconds: 10
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
